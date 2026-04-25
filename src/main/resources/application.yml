@@ -5,6 +5,10 @@ spring:
   application:
     name: onboarding-api
 
+logging:
+  level:
+    root: DEBUG
+
 springdoc:
   api-docs:
     path: /api-docs
