@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rajhiruopenapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rajhiruopenapi
+  template:
+    metadata:
+      labels:
+        app: rajhiruopenapi
+    spec:
+      containers:
+      - name: rajhiruopenapi
+        image: rajhiruopenapi:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
